@@ -1,3 +1,4 @@
+// Atributos
 let result = document.getElementById("result");
 let input = document.getElementById("input");
 let names = document.getElementById("names");
@@ -9,7 +10,7 @@ let buttonAddName = document.getElementById("buttonAddName");
 let checkBox = document.getElementById("checkbox");
 let buttonSorteio = document.getElementById("buttonSorteio");
 
-// Add name
+// Adicionar nome
 function addName() {
     let valor = input.value;
 
@@ -35,7 +36,7 @@ function addName() {
     buttonAddName.addEventListener("click", onload());
 }
 
-// Remove name
+// Remover nome
 function removeName() {
     let buttonRemove = this;
     let remove = buttonRemove.parentElement;
@@ -47,7 +48,7 @@ function removeName() {
 
 let nameP = document.getElementsByClassName("nameP");
 
-// Sorteia
+// Sortear
 function sorteio() {
     let valorName = names.innerHTML;
 
@@ -78,7 +79,7 @@ function sorteio() {
     buttonSorteio.addEventListener("click", check());
 }
 
-// Verifica
+// Verificar
 function check() {
     if (checkBox.checked == true) {
         names.innerHTML = "";
@@ -87,6 +88,7 @@ function check() {
     }
 }
 
+// Remover nomes após sorteiar
 onload = function () {
     let dadoName = localStorage.getItem("valor");
     let dado = JSON.parse(dadoName);
